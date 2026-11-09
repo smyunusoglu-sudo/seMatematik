@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>seMatematik · Sema Yunusoğlu ile Matematik</title>
+<meta name="google-site-verification" content="tQk_yBF4mbIvpWH4wxqgDgIIWg-6hG-_nKG53A_9q7Q" />
 <meta name="description" content="Matematik öğretmeni Sema Yunusoğlu'nun ücretsiz PDF'leri: Maarif Modeli 9-11. sınıf ders notları, yazılıya hazırlık setleri, TYT, AYT ve KPSS soru bankaları. Her hafta yeni PDF ve günün sorusu.">
+<link rel="canonical" href="https://smyunusoglu-sudo.github.io/seMatematik/">
 <meta property="og:title" content="seMatematik">
 <meta property="og:description" content="Her hafta yeni bir PDF, düzenli bir matematik.">
 <meta name="theme-color" content="#1E0F17">
@@ -154,6 +156,20 @@ form .row input{flex:1 1 220px}
 .fact dt{font:600 12.5px/1.6 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--rose)}
 .fact dd{margin:0;font-weight:500}
 @media (max-width:480px){.fact{grid-template-columns:1fr;gap:4px}}
+
+/* Reviews */
+.reviews{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+@media (max-width:860px){.reviews{grid-template-columns:1fr}}
+.rev-lead h2{font-size:clamp(30px,4vw,46px);font-weight:800;margin-top:8px}
+.rev-lead p{color:var(--ink-soft);margin-top:14px;max-width:30em}
+.rev-lead .btn{margin-top:22px}
+.rev-empty{position:relative;border:1.5px dashed var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;justify-content:center;gap:14px;background:var(--paper-2);min-width:0}
+.rev-empty .quote-mark{font:800 96px/0.6 var(--f-display);color:var(--rose);opacity:.35}
+.rev-empty h3{font-size:24px;font-weight:700}
+.rev-empty p{color:var(--ink-soft);font-size:15px}
+.stars{color:var(--warn);letter-spacing:4px;font-size:18px}
+.rev-steps{display:flex;gap:8px;flex-wrap:wrap}
+.rev-steps span{font:400 12.5px/1 var(--f-mono);padding:7px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink-soft)}
 
 /* Social + footer */
 .social{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
@@ -348,6 +364,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <button class="btn" type="submit">Bilgi iste</button>
       </form>
       <p class="msg" id="ask-msg" hidden></p>
+    </div>
+  </section>
+
+  <section id="yorumlar">
+    <div class="wrap reviews">
+      <div class="rev-lead">
+        <div class="eyebrow">Öğrencilerim ne diyor?</div>
+        <h2>Senin yorumun bir sonraki öğrenciye yol gösterir.</h2>
+        <p>Bir PDF işine yaradı mı, bir konuyu sonunda anladın mı? Birkaç cümleyle yaz. Her yorumu okuyup onayladıktan sonra burada paylaşıyorum.</p>
+        <a class="btn" id="yorum-btn" href="#yorumlar">Yorum yaz ✍️</a>
+        <p class="small" id="yorum-note">Yorum formu çok yakında burada açılacak.</p>
+      </div>
+      <div class="rev-empty">
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <h3>İlk yorum senin olsun.</h3>
+        <p>Onaylanan yorumlar adın kısaltılarak yayınlanır. Örneğin "Elif K. · 11. sınıf".</p>
+        <div class="rev-steps"><span>1 · Yorumunu yaz</span><span>2 · Sema okur</span><span>3 · Sitede yayınlanır</span></div>
+      </div>
     </div>
   </section>
 
