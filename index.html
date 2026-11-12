@@ -118,7 +118,8 @@ section{padding-block:64px}
 .bar{flex:1;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--rose-soft),var(--rose));opacity:.85}
 .pdf .act{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:6px;border-top:1px dashed var(--line)}
 .pdf .act a{font-weight:600;color:var(--rose);text-decoration:none;font-size:15px}
-.pdf .act span{font:400 12px/1 var(--f-mono);color:var(--ink-soft)}
+.pdf .links{display:flex;flex-wrap:wrap;gap:6px 14px}
+.pdf .act span{white-space:nowrap;font:400 12px/1 var(--f-mono);color:var(--ink-soft)}
 .pdf.soon{background:repeating-linear-gradient(135deg,var(--paper),var(--paper) 10px,var(--paper-2) 10px,var(--paper-2) 20px);border-style:dashed}
 .note{font:400 12.5px/1.5 var(--f-mono);color:var(--ink-soft);margin-top:16px}
 
@@ -224,7 +225,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <p class="qtext" id="q-text"></p>
       <div class="opts" role="group" aria-label="Seçenekler" id="opts"></div>
       <p class="feedback" id="fb" aria-live="polite">Bir şık seç, cevabını hemen gör.</p>
-      <p class="src">Bu haftanın konusu: YKS hocalarının haftalık konu takibinden · Problemler</p>
+      <p class="src" id="q-src">Bu haftanın konusu: YKS hocalarının haftalık konu takibinden · Problemler</p>
     </div>
   </div>
 
@@ -234,10 +235,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <div class="num">#01</div>
         <div>
           <div class="eyebrow" style="color:inherit;opacity:.85">Bu haftanın PDF'i</div>
-          <h3 style="margin-top:6px">11. Sınıf · Tema 1: İstatistik Yazılıya Hazırlık</h3>
-          <p>Maarif Modeli'ne uygun, cevap anahtarlı ve kolaydan zora sıralı soru seti.</p>
+          <h3 style="margin-top:6px">TYT Problem Kampı · Yaş Problemleri</h3>
+          <p>Kampın yeni durağı: kolaydan ortaya sıralı yaş problemleri testi.</p>
         </div>
-        <a class="btn" href="#kutuphane">İndir</a>
+        <a class="btn" href="https://drive.google.com/file/d/1UdiZOz-xfhIlgm-DL8w7aG3IbSL4S2oS/view" target="_blank" rel="noopener">İndir</a>
       </div>
     </div>
   </section>
@@ -246,59 +247,112 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">PDF Kütüphanesi</div><h2>Sınavını seç, PDF'ini indir.</h2></div>
-        <p>Her hafta yeni setler eklenir. Her PDF'te cevap anahtarı ve zorluk sıralaması vardır.</p>
+        <p>Her hafta yeni setler eklenir. Çoğu PDF'in yanında çözümlü sürümü de var.</p>
       </div>
       <div class="filters" role="group" aria-label="Kategori filtresi">
         <button class="filter" aria-pressed="true" data-f="hepsi" id="f-hepsi">Hepsi</button>
         <button class="filter" aria-pressed="false" data-f="maarif" id="f-maarif">Maarif 9–11</button>
-        <button class="filter" aria-pressed="false" data-f="tyt" id="f-tyt">TYT / AYT</button>
+        <button class="filter" aria-pressed="false" data-f="tyt" id="f-tyt">TYT Problem Kampı</button>
         <button class="filter" aria-pressed="false" data-f="kpss" id="f-kpss">KPSS</button>
-        <button class="filter" aria-pressed="false" data-f="haftalik" id="f-haftalik">Haftalık Soru Çözüm</button>
       </div>
       <div class="shelf" id="shelf">
         <article class="pdf" data-c="maarif">
-          <div class="top"><span class="code">MAARİF · 11</span><span class="pages">ders notu</span></div>
-          <h3>Tema 1: İstatistik Ders Notu</h3>
-          <p>Konu anlatımı, çözümlü örnekler ve sınıf içi alıştırmalar.</p>
-          <div class="level">kolay<div class="bar"></div>zor</div>
-          <div class="act"><a href="#">PDF'i indir ↓</a><span>Ekim 2026</span></div>
+          <div class="top"><span class="code">MAARİF · 9</span><span class="pages">1. yazılı</span></div>
+          <h3>9. Sınıf 1. Yazılıya Hazırlık</h3>
+          <p>MEB senaryolarına uygun yazılı provası. Önce çöz, sonra çözümlerle kontrol et.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1jc9RgUTHzypjq40v68u1kauZQgITryg5/view" target="_blank" rel="noopener">Soruları indir ↓</a><a href="https://drive.google.com/file/d/1mbaHocABg_KeN_NpYMxzuADst6U7iP8p/view" target="_blank" rel="noopener">Çözümlü ↓</a></div><span>Ekim 2026</span></div>
         </article>
         <article class="pdf" data-c="maarif">
-          <div class="top"><span class="code">MAARİF · 9–10–11</span><span class="pages">yazılı</span></div>
-          <h3>Yazılıya Hazırlık Paketi</h3>
-          <p>Her sınıf için ayrı set: yazılıda çıkabilecek soru tipleri ve cevap anahtarı.</p>
-          <div class="level">kolay<div class="bar"></div>zor</div>
-          <div class="act"><a href="maarif-model/">Paketleri aç →</a><span>Kasım 2026</span></div>
+          <div class="top"><span class="code">MAARİF · 10</span><span class="pages">1. yazılı</span></div>
+          <h3>10. Sınıf 1. Yazılıya Hazırlık</h3>
+          <p>Trigonometri ve üçgenler. Çözüm alanlı soru kitapçığı ve tam çözümler.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1XxLBp3p-_veJDj8h-EHxe-XyaxiiIau8/view" target="_blank" rel="noopener">Soruları indir ↓</a><a href="https://drive.google.com/file/d/1o_NIqii5RmKq8YzPCtS7gG-FHc5PSMmU/view" target="_blank" rel="noopener">Çözümlü ↓</a></div><span>Ekim 2026</span></div>
         </article>
-        <article class="pdf" data-c="kpss">
-          <div class="top"><span class="code">KPSS · ORTAÖĞRETİM</span><span class="pages">soru bankası</span></div>
-          <h3>Problemler Soru Bankası</h3>
-          <p>Çıkmış soru tiplerinden uyarlanmış, yeni hikayeli sorular.</p>
-          <div class="level">kolay<div class="bar"></div>zor</div>
-          <div class="act"><a href="#">PDF'i indir ↓</a><span>Ekim 2026</span></div>
+        <article class="pdf" data-c="maarif">
+          <div class="top"><span class="code">MAARİF · 11</span><span class="pages">1. yazılı</span></div>
+          <h3>11. Sınıf 1. Yazılıya Hazırlık</h3>
+          <p>İstatistik ve dörtgenler. Çözüm alanlı soru kitapçığı ve tam çözümler.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1DifsDRVkw_TbewDS4WtidaA3-pJNVHFH/view" target="_blank" rel="noopener">Soruları indir ↓</a><a href="https://drive.google.com/file/d/1BNCeZy-2GnxjR_FKDj7oQRJ9Hj71WO62/view" target="_blank" rel="noopener">Çözümlü ↓</a></div><span>Ekim 2026</span></div>
         </article>
-        <article class="pdf" data-c="haftalik">
-          <div class="top"><span class="code">YOUTUBE · HAFTALIK</span><span class="pages">10–15 soru</span></div>
-          <h3>Haftalık Soru Çözüm Seti</h3>
-          <p>Videoda çözdüğümüz soruların PDF'i. Önce sen dene, sonra videoyu izle.</p>
-          <div class="level">kolay<div class="bar"></div>zor</div>
-          <div class="act"><a href="#">PDF'i indir ↓</a><span>Her çarşamba</span></div>
+        <article class="pdf" data-c="maarif">
+          <div class="top"><span class="code">MAARİF · 9</span><span class="pages">ara tekrar</span></div>
+          <h3>9. Sınıf Ara Tekrar 1</h3>
+          <p>Yazılı sonrası konuları unutmamak için kısa tekrar testi.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1F_84buPvEL2XDayBL3Cov7RBpP_LEkzK/view" target="_blank" rel="noopener">Soruları indir ↓</a><a href="https://drive.google.com/file/d/1owoUa1aJWc2et-gqN8DTS05JFq86bRaw/view" target="_blank" rel="noopener">Çözümlü ↓</a></div><span>Kasım 2026</span></div>
+        </article>
+        <article class="pdf" data-c="maarif">
+          <div class="top"><span class="code">MAARİF · 10</span><span class="pages">ara tekrar</span></div>
+          <h3>10. Sınıf Ara Tekrar 1</h3>
+          <p>Yazılı sonrası konuları unutmamak için kısa tekrar testi.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/17Wah4g2b52CmSwcMFQEvCHBt0TMYScU3/view" target="_blank" rel="noopener">Soruları indir ↓</a><a href="https://drive.google.com/file/d/1hBvwuVkAEQ84GZ288IKBCH5SJlU6Cqef/view" target="_blank" rel="noopener">Çözümlü ↓</a></div><span>Kasım 2026</span></div>
+        </article>
+        <article class="pdf" data-c="maarif">
+          <div class="top"><span class="code">MAARİF · 11</span><span class="pages">ara tekrar</span></div>
+          <h3>11. Sınıf Ara Tekrar 1</h3>
+          <p>Yazılı sonrası konuları unutmamak için kısa tekrar testi.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1on_7k27Qs3aRK81Xoa_j4q6HeROxDRqI/view" target="_blank" rel="noopener">Soruları indir ↓</a><a href="https://drive.google.com/file/d/13kdKPC8Mbjpm9M-MzvrEJE6x41eQ89fE/view" target="_blank" rel="noopener">Çözümlü ↓</a></div><span>Kasım 2026</span></div>
+        </article>
+        <article class="pdf" data-c="maarif">
+          <div class="top"><span class="code">MAARİF · 9</span><span class="pages">özet kart</span></div>
+          <h3>9. Sınıf Yazılı Hatırlatma Kartı</h3>
+          <p>Sınavdan önce bakılacak tek sayfalık formül ve kural özeti.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1fcnMgsHS1nncK1MaZ9khnzB_fr3UIkcD/view" target="_blank" rel="noopener">Kartı indir ↓</a></div><span>Ekim 2026</span></div>
         </article>
         <article class="pdf" data-c="tyt">
-          <div class="top"><span class="code">TYT</span><span class="pages">soru seti</span></div>
-          <h3>Sayılar ve Problemler Isınma Seti</h3>
-          <p>TYT temel matematik için hız kazandıran kısa set.</p>
-          <div class="level">kolay<div class="bar"></div>zor</div>
-          <div class="act"><a href="#">PDF'i indir ↓</a><span>Kasım 2026</span></div>
+          <div class="top"><span class="code">TYT · PROBLEM KAMPI</span><span class="pages">kolay test</span></div>
+          <h3>Sayı Problemleri</h3>
+          <p>Problem kampının ilk durağı. Denklem kurmayı öğreten kolay test.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1tCQhsbIoqiw0btE-91OKXTTKHXEB7RC7/view" target="_blank" rel="noopener">Kolay testi indir ↓</a></div><span>Kasım 2026</span></div>
+        </article>
+        <article class="pdf" data-c="tyt">
+          <div class="top"><span class="code">TYT · PROBLEM KAMPI</span><span class="pages">zor test</span></div>
+          <h3>Sayı Problemleri · Zor</h3>
+          <p>Kolay testi bitirenler için seçici sorular.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1NHTm_xFbxSkAfIsZJxy7CVWgVtONZqi3/view" target="_blank" rel="noopener">Zor testi indir ↓</a><a href="https://drive.google.com/file/d/1JEoUF9BebEABx8H4FoB_GOmst9sDbqNU/view" target="_blank" rel="noopener">Çözümlü ↓</a></div><span>Kasım 2026</span></div>
+        </article>
+        <article class="pdf" data-c="tyt">
+          <div class="top"><span class="code">TYT · PROBLEM KAMPI</span><span class="pages">kolay → zor</span></div>
+          <h3>Kesir Problemleri</h3>
+          <p>Kolay-orta test ve çözümlü zor test bir arada.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1_U5dpjVzcbq7bQlZvkwtUukL2ZBLNCyu/view" target="_blank" rel="noopener">Kolay-Orta ↓</a><a href="https://drive.google.com/file/d/1bFZl447r1LCaRYM49QukFnFz0J0n_kn7/view" target="_blank" rel="noopener">Zor test ↓</a><a href="https://drive.google.com/file/d/12WthJIagkNA3q1atQAUr516i4ZXHr-Ze/view" target="_blank" rel="noopener">Çözümlü ↓</a></div><span>Kasım 2026</span></div>
+        </article>
+        <article class="pdf" data-c="tyt">
+          <div class="top"><span class="code">TYT · PROBLEM KAMPI</span><span class="pages">kolay-orta</span></div>
+          <h3>Yaş Problemleri</h3>
+          <p>Şimdi-geçmiş-gelecek tablosuyla adım adım yaş problemleri.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1UdiZOz-xfhIlgm-DL8w7aG3IbSL4S2oS/view" target="_blank" rel="noopener">Kolay-Orta testi indir ↓</a></div><span>Kasım 2026</span></div>
+        </article>
+        <article class="pdf" data-c="kpss">
+          <div class="top"><span class="code">KPSS · ORTAÖĞRETİM</span><span class="pages">tam set</span></div>
+          <h3>KPSS 2026 Matematik Tam Set</h3>
+          <p>Ortaöğretim KPSS matematiği için kapsamlı seMatematik seti.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1QvS9LeTchLfoD_5OO6j12gYk3Qi_39Tw/view" target="_blank" rel="noopener">Seti indir ↓</a></div><span>Ekim 2026</span></div>
+        </article>
+        <article class="pdf" data-c="kpss">
+          <div class="top"><span class="code">KPSS · ORTAÖĞRETİM</span><span class="pages">ilk 12 konu</span></div>
+          <h3>KPSS Matematik · İlk 12 Konu</h3>
+          <p>Temel kavramlardan başlayan konu konu soru seti.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1IcbIV9YUQ7J5HJ57k5_M-g67hYDINApb/view" target="_blank" rel="noopener">PDF'i indir ↓</a></div><span>Ekim 2026</span></div>
+        </article>
+        <article class="pdf" data-c="kpss">
+          <div class="top"><span class="code">KPSS · ORTAÖĞRETİM</span><span class="pages">konu 13+</span></div>
+          <h3>KPSS Matematik · Konu 13 ve Sonrası</h3>
+          <p>İleri konular için devam seti.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1b0ZomO3xS2P0WdmwAlWcYq_c9n0w138x/view" target="_blank" rel="noopener">PDF'i indir ↓</a></div><span>Ekim 2026</span></div>
+        </article>
+        <article class="pdf" data-c="kpss">
+          <div class="top"><span class="code">KPSS · ORTAÖĞRETİM</span><span class="pages">problemler</span></div>
+          <h3>KPSS Problemler · Set 2</h3>
+          <p>Çıkmış soru tiplerinden uyarlanmış problem seti.</p>
+          <div class="act"><div class="links"><a href="https://drive.google.com/file/d/1aV0X2oRyvOqP8VF29COJv5lo0TbMqp6-/view" target="_blank" rel="noopener">Seti indir ↓</a></div><span>Ekim 2026</span></div>
         </article>
         <article class="pdf soon" data-c="tyt kpss">
           <div class="top"><span class="code">YAKINDA</span><span class="pages">deneme</span></div>
           <h3>Online Denemeler</h3>
           <p>Süreli deneme sınavları ve sonuç analizi. Hazırlık aşamasında.</p>
-          <div class="act"><a href="#bulten">Haber ver →</a><span>2027</span></div>
+          <div class="act"><div class="links"><a href="#bulten">Haber ver →</a></div><span>2027</span></div>
         </article>
       </div>
-      <p class="note">Önizleme: kartlardaki PDF'ler örnek yerleşimdir, indirme bağlantıları yayına çıkarken eklenecek.</p>
     </div>
   </section>
 
@@ -420,21 +474,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 
 <script>
 (function(){
-  var Q={
-    kolay:{t:'Sayı Problemi',q:'Bir sayının 3 katının 5 fazlası 26 ediyor. Bu sayı kaçtır?',o:[5,6,7,8,9],a:7,ok:'Doğru! 3x + 5 = 26 → 3x = 21 → x = 7.',no:'Bir daha dene: önce 26\'dan 5 çıkar, sonra 3\'e böl.'},
-    orta:{t:'Yaş Problemi',q:'Ali\'nin yaşı Ayşe\'nin yaşının 2 katıdır. 6 yıl sonra yaşları toplamı 48 olacaktır. Ali bugün kaç yaşındadır?',o:[22,24,26,28,30],a:24,ok:'Doğru! Ayşe x, Ali 2x → (x+6) + (2x+6) = 48 → x = 12, Ali 24 yaşında.',no:'İpucu: 6 yıl sonra ikisinin de yaşı 6 artar, toplam 12 artar.'},
-    zor:{t:'İşçi Problemi',q:'Bir işi Ahmet tek başına 12 günde, Mehmet 18 günde bitiriyor. İkisi birlikte 4 gün çalıştıktan sonra Ahmet ayrılıyor. Kalan işi Mehmet kaç günde bitirir?',o:[5,6,7,8,9],a:8,ok:'Doğru! Birlikte günde 1/12 + 1/18 = 5/36. 4 günde 20/36 = 5/9 biter. Kalan 4/9 iş ÷ 1/18 = 8 gün.',no:'İpucu: önce ikisinin bir günde birlikte ne kadar iş yaptığını bul.'}
-  };
-  var L='ABCDE',fb=document.getElementById('fb'),box=document.getElementById('opts');
-  function show(k){var d=Q[k];document.getElementById('q-title').textContent=d.t;document.getElementById('q-text').textContent=d.q;
+  var Q={kolay:{t:'Sayı Problemi',q:'Bir sayının 3 katının 5 fazlası 26 ediyor. Bu sayı kaçtır?',o:['5','6','7','8','9'],a:'7',ok:'Doğru! 3x + 5 = 26 → x = 7.',no:'İpucu: önce 26\'dan 5 çıkar, sonra 3\'e böl.'},
+    orta:{t:'Yaş Problemi',q:'Ali\'nin yaşı Ayşe\'nin yaşının 2 katıdır. 6 yıl sonra yaşları toplamı 48 olacaktır. Ali bugün kaç yaşındadır?',o:['22','24','26','28','30'],a:'24',ok:'Doğru! (x+6) + (2x+6) = 48 → x = 12, Ali 24.',no:'İpucu: 6 yıl sonra toplam 12 artar.'},
+    zor:{t:'İşçi Problemi',q:'Bir işi Ahmet 12 günde, Mehmet 18 günde bitiriyor. Birlikte 4 gün çalıştıktan sonra Ahmet ayrılıyor. Kalan işi Mehmet kaç günde bitirir?',o:['5','6','7','8','9'],a:'8',ok:'Doğru! Kalan 4/9 ÷ 1/18 = 8 gün.',no:'İpucu: ikisinin bir günde birlikte yaptığı işi bul.'}};
+  var L='ABCDE',fb=document.getElementById('fb'),box=document.getElementById('opts'),cur='kolay';
+  function show(k){cur=k;var d=Q[k];document.getElementById('q-title').textContent=d.t;document.getElementById('q-text').textContent=d.q;
     fb.textContent='Bir şık seç, cevabını hemen gör.';box.innerHTML='';
     d.o.forEach(function(v,i){var b=document.createElement('button');b.className='opt';b.id='o-'+k+i;b.textContent=L[i]+') '+v;
       b.addEventListener('click',function(){box.querySelectorAll('.opt').forEach(function(x){x.classList.remove('wrong')});
-        if(v===d.a){b.classList.add('right');fb.textContent=d.ok;}else{b.classList.add('wrong');fb.textContent=d.no;}});
+        if(String(v)===String(d.a)){b.classList.add('right');fb.textContent=d.ok;}else{b.classList.add('wrong');fb.textContent=d.no;}});
       box.appendChild(b);});
     document.querySelectorAll('.lv').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.l===k?'true':'false')});}
   document.querySelectorAll('.lv').forEach(function(x){x.addEventListener('click',function(){show(x.dataset.l)})});
   show('kolay');
+  var AY=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+  function bugun(){try{return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Istanbul'}).format(new Date());}catch(e){return new Date().toISOString().slice(0,10);}}
+  fetch('gunun-sorusu.json?v='+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){
+    var g=(j.gunler||[]).slice().sort(function(a,b){return a.tarih<b.tarih?-1:1});if(!g.length)return;var t=bugun(),day=null;
+    for(var i=0;i<g.length;i++){if(g[i].tarih<=t)day=g[i];}
+    var son=g[g.length-1],gecen=Math.floor((Date.parse(t)-Date.parse(son.tarih))/864e5);
+    if(!day)day=g[0];else if(gecen>=2){var k=Math.floor(gecen/2);day=g[k%g.length];}
+    Q={kolay:day.kolay,orta:day.orta,zor:day.zor};
+    var p=t.split('-');document.getElementById('q-src').textContent=(+p[2])+' '+AY[+p[1]-1]+' · '+(j.konu||'')+' · '+(day.baslik||'');
+    show(cur);
+  }).catch(function(){});
   var fs=document.querySelectorAll('.filter'),cards=document.querySelectorAll('#shelf .pdf');
   fs.forEach(function(f){f.addEventListener('click',function(){
     fs.forEach(function(x){x.setAttribute('aria-pressed','false')});f.setAttribute('aria-pressed','true');
